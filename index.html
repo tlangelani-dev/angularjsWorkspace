@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="imsApp">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="bower_libs/angular/angular.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="wrapper" ng-controller="AppController">
+        <h1>IMS Clients</h1>
+        <p>
+            Pulling data using Angularjs
+        </p>
+
+        <form action="" ng-submit="send_data();$event.preventDefault()">
+
+            <div class="row">
+                <input type="text" ng-model="form_data.app_name">
+            </div>
+
+            <div class="row">
+                <select ng-model="form_data.db">
+                    <option ng-repeat="d in DBs" value="{{d.id}}">{{d.name}}</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <input type="text" ng-model="form_data.client">
+            </div>
+
+            <div class="row">
+                <input type="submit" value="Go">
+            </div>
+        </form>
+
+    </div>
+</body>
+</html>

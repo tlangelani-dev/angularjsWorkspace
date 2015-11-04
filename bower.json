@@ -1,0 +1,6 @@
+{
+    "name": "AngularJs Workstation",
+    "dependencies": {
+        "angular": "1.4.*"
+    }
+}
